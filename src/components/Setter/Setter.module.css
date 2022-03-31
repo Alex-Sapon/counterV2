@@ -1,0 +1,38 @@
+.setter_container {
+    width: 300px;
+    border-radius: 4px;
+    background-color: #282c34;
+    color: honeydew;
+    padding: 1rem;
+    margin: 0 1rem 2rem 1rem;
+}
+
+.setter_inputs {
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    color: #282c34;
+    border: solid 2px #61dafb;
+    height: 120px;
+    padding: 10px;
+}
+
+.setter_buttons {
+    display: flex;
+    justify-content: center;
+    border: solid 2px #61dafb;
+    border-radius: 4px;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.setter_text {
+    color: #61dafb;
+    text-align: right;
+    align-items: center;
+    margin-right: 20px;
+    font-weight: 600;
+}

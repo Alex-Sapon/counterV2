@@ -1,0 +1,15 @@
+.app {
+  background-image: linear-gradient(to right, #DECBA4, #3E5151);
+}
+
+.container {
+  text-align: center;
+  height: 100vh;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+}

@@ -1,0 +1,17 @@
+.container_output {
+    width: 300px;
+    border-radius: 4px;
+    background-color: #282c34;
+    color: honeydew;
+    padding: 1rem;
+    margin: 0 1rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    border: solid 2px #61dafb;
+    border-radius: 4px;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}

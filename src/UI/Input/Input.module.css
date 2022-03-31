@@ -1,0 +1,47 @@
+:root {
+    --input-color: #47494e;
+    --input-border: #CDD9ED;
+    --input-background: #fff;
+    --input-placeholder: #CBD1DC;
+
+    --input-border-focus: #275EFE;
+
+    --group-color: var(--input-color);
+    --group-border: var(--input-border);
+    --group-background: #EEF4FF;
+
+    --group-color-focus: #fff;
+    --group-border-focus: var(--input-border-focus);
+    --group-background-focus: #678EFE;
+
+    --input-color-error-bg: rgb(255 0 0 / 53%);;
+    --input-color-error-text: #fff;
+}
+
+.input {
+    display: inline-block;
+    width: 50%;
+    padding: 6px 14px;
+    line-height: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 6px;
+    color: var(--input-color);
+    border: 1px solid var(--input-border);
+    background: var(--input-background);
+    transition: border .3s ease;
+}
+
+.input::placeholder {
+    color: var(--input-placeholder);
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input_error {
+    background-color: var(--input-color-error-bg);
+    color: var(--input-color-error-text);
+}
