@@ -30,7 +30,8 @@ const Setter: FC<SetterProps> = ({startValue, maxValue, setMaxValue, setStartVal
                 </div>
             </form>
             <div className={styles.setter_buttons}>
-                <Button title={'set'} onClick={setLocalStorageHandler} disabled={disable}/>
+                {disable ? <div className={styles.setter_error}>You entered an invalid value!</div> : 
+                <Button title={'set'} onClick={setLocalStorageHandler}/>}
             </div>
         </div>
     );

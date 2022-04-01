@@ -23,10 +23,13 @@
 .setter_buttons {
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     border: solid 2px #61dafb;
     border-radius: 4px;
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
+    min-height: 36px;
 }
 
 .setter_text {
@@ -35,4 +38,10 @@
     align-items: center;
     margin-right: 20px;
     font-weight: 600;
+}
+
+.setter_error {
+    color: crimson;
+    font-weight: 600;
+    font-size: 1.1rem;
 }

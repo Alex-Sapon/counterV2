@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import {Route, Routes, Navigate, useNavigate} from 'react-router-dom';
 import './App.css';
 import Counter from './components/Counter';
 import Setter from './components/Setter/Setter';
-import {Navigate, Route, Routes, useNavigate} from 'react-router-dom';
 
 export const PATH = {
     COUNTER: '/counter',
@@ -30,20 +30,12 @@ const App = () => {
         setStartValue(start)
     }, [max, start])
 
-    const disable = maxValue <= startValue || startValue < 0
-
     return (
-        <div className="app">
-            <div className={'container'}>
+        <div className={'app'}>
+            <div className={'app_container'}>
                 <Routes>
                     <Route path={'/'} element={<Navigate to={PATH.COUNTER}/>}/>
-                    <Route path={PATH.COUNTER} element={
-                        <Counter
-                            max={max}
-                            start={start}
-                            disable={disable}
-                        />}
-                    />
+                    <Route path={PATH.COUNTER} element={<Counter max={max} start={start}/>}/>
                     <Route path={PATH.SETTER} element={
                         <Setter
                             maxValue={maxValue}

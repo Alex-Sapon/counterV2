@@ -1,4 +1,4 @@
-.container_output {
+.output_container {
     width: 300px;
     border-radius: 4px;
     background-color: #282c34;
@@ -7,7 +7,7 @@
     margin: 0 1rem;
 }
 
-.buttons {
+.output_buttons {
     display: flex;
     justify-content: center;
     border: solid 2px #61dafb;

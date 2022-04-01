@@ -2,7 +2,7 @@
   background-image: linear-gradient(to right, #DECBA4, #3E5151);
 }
 
-.container {
+.app_container {
   text-align: center;
   height: 100vh;
   padding-top: 1rem;
