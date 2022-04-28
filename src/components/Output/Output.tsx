@@ -1,18 +1,13 @@
-import React, {FC} from 'react';
+import React from 'react';
 import styles from './Output.module.css';
 
-type HeaderProps = {
+type HeaderType = {
     value: number
     maxValue: number
 }
 
-const Output: FC<HeaderProps> = ({value, maxValue}) => {
+export const Output = React.memo(({value, maxValue}: HeaderType) => {
     const headerStyles = `${styles.output_window} ${value === maxValue && styles.output_limit}`
-    return (
-        <div className={headerStyles}>
-            {value}
-        </div>
-    );
-};
 
-export default Output;
+    return <div className={headerStyles}>{value}</div>
+})
