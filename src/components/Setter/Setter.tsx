@@ -1,24 +1,22 @@
-import React, {ChangeEvent, useEffect} from 'react';
+import {ChangeEvent, useEffect} from 'react';
 import Input from '../../UI/Input/Input';
 import styles from './Setter.module.css';
-import Button from '../../UI/Button/Button';
-import {useDispatch} from 'react-redux';
+import {Button} from '../../UI/Button/Button';
+import {useDispatch, useSelector} from 'react-redux';
 import {useNavigate} from 'react-router';
 import {PATH} from '../../App';
-import {isDisabledAC, resetValueAC, setMaxValueAC, setMinValueAC} from '../../bll/counter-reducer';
+import {CounterStateType, isDisabledAC, resetValueAC, setMaxValueAC, setMinValueAC} from '../../bll/counter-reducer';
+import {RootStateType} from '../../bll/store';
 
-type SetterType = {
-    minValue: number
-    maxValue: number
-    isDisabled: boolean
-};
-
-export const Setter = React.memo(({minValue, maxValue, isDisabled}: SetterType) => {
+export const Setter = () => {
+    const {minValue, maxValue, isDisabled} = useSelector<RootStateType, CounterStateType>(state => state.counter);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
     useEffect(() => {
-        maxValue <= minValue || minValue < 0 ? dispatch(isDisabledAC(true)) : dispatch(isDisabledAC(false))
+        maxValue <= minValue || minValue < 0
+            ? dispatch(isDisabledAC(true))
+            : dispatch(isDisabledAC(false));
     }, [minValue, maxValue]);
 
     const onChangeMaxHandler = (e: ChangeEvent<HTMLInputElement>) => dispatch(setMaxValueAC(+e.currentTarget.value))
@@ -47,5 +45,5 @@ export const Setter = React.memo(({minValue, maxValue, isDisabled}: SetterType) 
                     : <Button title={'set'} onClick={setValueHandler}/>}
             </div>
         </div>
-    )
-});
+    );
+};

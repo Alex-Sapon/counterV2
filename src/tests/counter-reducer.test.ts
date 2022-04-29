@@ -6,12 +6,12 @@ test('correct value should be uncremented', () => {
         minValue: 0,
         maxValue: 1,
         isDisabled: false
-    }
+    };
 
-    const endState = counterReducer(initialState, incValueAC())
+    const endState = counterReducer(initialState, incValueAC());
 
-    expect(endState.value).toBe(1)
-})
+    expect(endState.value).toBe(1);
+});
 
 test('correct value should be reseted', () => {
     const initialState: CounterStateType = {
@@ -19,12 +19,12 @@ test('correct value should be reseted', () => {
         minValue: 0,
         maxValue: 1,
         isDisabled: false
-    }
+    };
 
-    const endState = counterReducer(initialState, resetValueAC(0))
+    const endState = counterReducer(initialState, resetValueAC(0));
 
-    expect(endState.value).toBe(0)
-})
+    expect(endState.value).toBe(0);
+});
 
 test('correct min value should be changed', () => {
     const initialState: CounterStateType = {
@@ -32,12 +32,12 @@ test('correct min value should be changed', () => {
         minValue: 0,
         maxValue: 1,
         isDisabled: false
-    }
+    };
 
-    const endState = counterReducer(initialState, setMinValueAC(5))
+    const endState = counterReducer(initialState, setMinValueAC(5));
 
-    expect(endState.minValue).toBe(5)
-})
+    expect(endState.minValue).toBe(5);
+});
 
 test('correct max value should be changed', () => {
     const initialState: CounterStateType = {
@@ -45,12 +45,12 @@ test('correct max value should be changed', () => {
         minValue: 0,
         maxValue: 1,
         isDisabled: false
-    }
+    };
 
-    const endState = counterReducer(initialState, setMaxValueAC(7))
+    const endState = counterReducer(initialState, setMaxValueAC(7));
 
-    expect(endState.maxValue).toBe(7)
-})
+    expect(endState.maxValue).toBe(7);
+});
 
 test('disabled should be changed from false to true', () => {
     const initialState: CounterStateType = {
@@ -58,9 +58,9 @@ test('disabled should be changed from false to true', () => {
         minValue: 0,
         maxValue: 1,
         isDisabled: false
-    }
+    };
 
-    const endState = counterReducer(initialState, isDisabledAC(true))
+    const endState = counterReducer(initialState, isDisabledAC(true));
 
-    expect(endState.isDisabled).toBeTruthy()
-})
+    expect(endState.isDisabled).toBeTruthy();
+});
